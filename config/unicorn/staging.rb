@@ -1,5 +1,5 @@
 # paths
-app_path = "/home/example/sidekiq-sample"
+app_path = "/var/www/sidekiq-sample"
 working_directory "#{app_path}/current"
 pid               "#{app_path}/current/tmp/pids/unicorn.pid"
 
