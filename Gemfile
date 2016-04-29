@@ -27,11 +27,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn', group: :staging
 
 # Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
-gem 'capistrano-rbenv', group: :development
+group :development do
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
